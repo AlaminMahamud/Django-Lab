@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth.models import User
 
 from rest_framework import (
     routers,
@@ -8,7 +9,7 @@ from rest_framework import (
 )
 
 # serializers define the API representations
-class UserSerializer(serializers.HyperLinkedModelSerializer):
+class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User,
         fields = (
